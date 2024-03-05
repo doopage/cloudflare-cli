@@ -533,7 +533,7 @@ function CloudflareCli(options) {
       params.query = _.fromPairs(
         _.map(query,
           function (filter) {
-            return filter.split(':');
+            return filter.split(/:(.*)/).slice(0,2);
           }
         )
       );
