@@ -117,6 +117,8 @@ OPTIONS:
     -p  --priority  Set priority when adding a record (MX or SRV)
     -q  --query     Comma separated filters to use when finding a record
     -l  --ttl       Set ttl on add or edit (120 - 86400 seconds, or 1 for auto)
+    -m  --comment   Comment of the DNS record
+        --tags      Tags of DNS record, only commercial Cloudflare account supported it
     -h  --help      Display help
 
 COMMANDS:
