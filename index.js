@@ -539,6 +539,10 @@ function CloudflareCli(options) {
       );
 
     }
+    //Process tags option
+    if (params.tags) {
+      params.tags = params.tags.split(',');
+    }
     return _.extend(params, _.fromPairs(_.zip(cmd.params.concat(cmd.optionalParams), _.drop(params._, 1))));
   }
 
@@ -567,7 +571,7 @@ function CloudflareCli(options) {
     if (options.name !== undefined) {
       options.name = _.toString(options.name);
     }
-    options = _.omit(options, ['domain', 'email', 'token', '_', 'activate', 'a']);
+    options = _.omit(options, ['domain', 'email', 'token', '_', 'activate', 'a', 'm', 't']);
 
     return options;
   }
